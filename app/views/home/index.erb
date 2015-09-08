@@ -1,0 +1,49 @@
+<h1>Call Tracking with Twilio</h1>
+<p>This app shows you how to implement a sample call tracking application with Twilio. Add a new phone number below to get started.</p>
+<div class="row">
+  <div class="col-md-5">
+    <h2>Add a new number</h2>
+    <p>Create a new lead source by purchasing a new phone number. Area code is optional.</p>
+
+    <p>Form goes here</p>
+
+    <h2>Add a new number</h2>
+    <p>Create a new lead source by purchasing a new phone number. Area code is optional.</p>
+    <% if @lead_sources %>
+    <table class="table table-striped">
+      <tr>
+        <th>Name</th>
+        <th>Incoming Number</th>
+        <th>Forwarding Number</th>
+      </tr>
+      <% @lead_sources.each do |lead_source| %>
+      <tr>
+        <td><%= lead_source.name %></td>
+        <td><%= lead_source.incoming_number %></td>
+        <td><%= lead_source.forwarding_number %></td>
+      </tr>
+      <% end %>
+    </table>
+    <% else %>
+      <p><b>Add a new number to populate this list</b></p>
+    <% end %>
+  </div>
+  <div class="col-md-7">
+    <h2>Charts</h2>
+    <p>The latest statistics about how the lead sources are performing.</p>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Calls by lead source</h3>
+        <p>The number of incoming calls each lead source has received.</p>
+        <canvas id="leads-by-source"></canvas>
+      </div>
+
+      <div class="col-md-6">
+        <h3>Calls by city</h3>
+        <p>The number of calls from different cities, based on Twilio call data</p>
+        <canvas id="leads-by-city"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
