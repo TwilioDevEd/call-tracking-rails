@@ -13,6 +13,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'turbolinks'
 gem 'twilio-ruby'
 
 group :test do
