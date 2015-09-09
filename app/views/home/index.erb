@@ -11,18 +11,24 @@
     <p>Create a new lead source by purchasing a new phone number. Area code is optional.</p>
     <% if @lead_sources %>
     <table class="table table-striped">
-      <tr>
-        <th>Name</th>
-        <th>Incoming Number</th>
-        <th>Forwarding Number</th>
-      </tr>
-      <% @lead_sources.each do |lead_source| %>
-      <tr>
-        <td><%= lead_source.name %></td>
-        <td><%= lead_source.incoming_number %></td>
-        <td><%= lead_source.forwarding_number %></td>
-      </tr>
-      <% end %>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Incoming Number</th>
+          <th>Forwarding Number</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @lead_sources.each do |lead_source| %>
+        <tr>
+          <td><%= lead_source.name %></td>
+          <td><%= lead_source.incoming_number %></td>
+          <td><%= lead_source.forwarding_number %></td>
+          <td><%= link_to 'Edit', edit_lead_source_path(lead_source), class: 'btn btn-default btn-xs' %></td>
+        </tr>
+        <% end %>
+      </tbody>
     </table>
     <% else %>
       <p><b>Add a new number to populate this list</b></p>
