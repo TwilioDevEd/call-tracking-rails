@@ -4,9 +4,13 @@
   <div class="col-md-5">
     <h2>Add a new number</h2>
     <p>Create a new lead source by purchasing a new phone number. Area code is optional.</p>
-
-    <p>Form goes here</p>
-
+    <form class="form-inline" action="/available_phone_numbers" method="get">
+      <div class="form-group">
+        <label class="sr-only control-label" for="area-code">Area code</label>
+        <input id="area-code" name="area-code" type="text" class="form-control" value="415" maxlength="3" />
+      </div>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
     <h2>Add a new number</h2>
     <p>Create a new lead source by purchasing a new phone number. Area code is optional.</p>
     <% if @lead_sources %>

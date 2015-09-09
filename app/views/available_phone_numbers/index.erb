@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="page-header">
+      <h1>Purchase a new phone number</h1>
+    </div>
+
+    <p>
+    The number you choose will be used to create a Lead Source. On the next page, you will set a name and forwarding number for this lead source.
+    </p>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Phone number</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @phone_numbers.each do |number| %>
+        <tr>
+          <td><%= number.friendly_name %></td>
+          <td>Purchase</td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
