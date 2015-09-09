@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="page-header">
+    <h1>Edit lead source for <%= @lead_source.incoming_number %></h1>
+  </div>
+  <div class="col-md-9">
+    <%= form_for @lead_source, html: { class: "form-horizontal" } do |f| %>
+      <div class="form-group">
+        <%= f.label :name, "Name", class: "col-md-2 control-label" %>
+        <div class="col-md-10">
+          <%= f.text_field :name, class: "form-control" %>
+          <p class="help-block">E.g. "Downtown billboard"</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :forwarding_number, "Forwarding number", class: "col-md-2 control-label" %>
+        <div class="col-md-10">
+          <%= f.text_field :forwarding_number, class: "form-control" %>
+          <p class="help-block">People who call this lead source will be connected with this phone number. Must include international prefix - e.g. +1 555 555 55555</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <a href="/" class="btn btn-default">Cancel</a>
+          <%= f.submit "Update lead source", class: "btn btn-primary" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
