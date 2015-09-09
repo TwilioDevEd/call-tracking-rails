@@ -1,6 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe LeadSource do
+  describe '.count_leads' do
+    it "counts leads grouped by Lead Source" do
+      downtown = create(:lead_source, name: "Downtown")
+      create_list(:lead, 2, lead_source: downtown)
+
+      expect(described_class.count_leads).to eq({"Downtown" => 2})
+    end
+  end
+
   describe "#to_str" do
     context "when name is present" do
       it "shows the name and the incoming number" do
