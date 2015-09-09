@@ -1,7 +1,9 @@
 class Lead < ActiveRecord::Base
   belongs_to :lead_source
 
-  scope :by_city, -> (city) { where(city: city) }
+  def self.count_by_city
+    group(:city).count
+  end
 
   def to_str
     "#{city}, #{state}"
