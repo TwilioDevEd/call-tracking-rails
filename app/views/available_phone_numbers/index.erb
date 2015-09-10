@@ -5,7 +5,7 @@
     </div>
 
     <p>
-    The number you choose will be used to create a Lead Source. On the next page, you will set a name and forwarding number for this lead source.
+      The number you choose will be used to create a Lead Source. On the next page, you will set a name and forwarding number for this lead source.
     </p>
 
     <table class="table table-striped">
@@ -19,7 +19,9 @@
       <% @phone_numbers.each do |number| %>
         <tr>
           <td><%= number.friendly_name %></td>
-          <td>Purchase</td>
+          <td>
+            <%= link_to 'Purchase', lead_sources_path(number.phone_number), method: :post, class: 'btn btn-primary btn-xs' %>
+          </td>
         </tr>
       <% end %>
       </tbody>

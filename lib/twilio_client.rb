@@ -3,6 +3,10 @@ class TwilioClient
     new.available_phone_numbers(area_code)
   end
 
+  def self.purchase_phone_number(phone_number)
+    new.purchase_phone_number(phone_number)
+  end
+
   def initialize
     # To find TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN visit
     # https://www.twilio.com/user/account
@@ -17,8 +21,8 @@ class TwilioClient
   end
 
   def purchase_phone_number(phone_number)
-    client.available_phone_numbers.
-      purchase(phone_number: phone_number, voice_application_sid: ENV['TWIML_APPLICATION_SID'])
+    client.incoming_phone_numbers.
+      create(phone_number: phone_number, voice_application_sid: ENV['TWIML_APPLICATION_SID'])
   end
 
   private

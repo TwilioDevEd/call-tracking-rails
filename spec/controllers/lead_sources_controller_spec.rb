@@ -12,6 +12,28 @@ describe LeadSourcesController do
     end
   end
 
+  describe "#create" do
+    let(:twilio_number) do
+      double('Twilio Number',
+             friendly_name: '(256) 841-7275')
+    end
+
+    before do
+      allow(TwilioClient).to receive(:purchase_phone_number) { twilio_number }
+    end
+
+    it "creates a lead source" do
+      expect do
+        post :create, format: '+12568417275'
+      end.to change(LeadSource, :count).by(1)
+    end
+
+    it "redirects to lead source edit url" do
+      post :create, format: '+12568417275'
+      expect(response).to redirect_to edit_lead_source_path(LeadSource.last)
+    end
+  end
+
   describe "#update" do
     let(:lead_source) { create(:lead_source, name: "Downtown") }
 
