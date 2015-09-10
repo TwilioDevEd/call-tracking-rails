@@ -1,4 +1,6 @@
 class LeadsController < ApplicationController
+  skip_before_filter :verify_authenticity_token
+
   def create
     lead = Lead.create(lead_params)
     forward_call(lead.phone_number)
@@ -24,6 +26,7 @@ class LeadsController < ApplicationController
   end
 
   def lead_source
-    LeadSource.find_by_incoming_number(params[:Called])
+    incoming_number = GlobalPhone.parse(params[:Called]).national_format
+    LeadSource.find_by_incoming_number(incoming_number)
   end
 end
