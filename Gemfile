@@ -16,6 +16,7 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'twilio-ruby'
+gem 'global_phone'
 
 group :test do
   gem 'byebug'
