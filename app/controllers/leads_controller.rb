@@ -3,7 +3,7 @@ class LeadsController < ApplicationController
 
   def create
     lead = Lead.create(lead_params)
-    forward_call(lead.phone_number)
+    forward_call(lead_source.forwarding_number)
   end
 
   private
