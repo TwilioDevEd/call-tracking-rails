@@ -17,34 +17,38 @@ This project is built using the [Ruby on Rails](http://rubyonrails.org/) web fra
 
 2. Install the dependencies:
    ```
-   bundle install
+   bundle
    ```
 
-3. Create database and run migrations:
+3. Export the environment variables:
+   You can find the `AccountSID` and the `AuthToken` at https://www.twilio.com/user/account/settings.
+   ```
+   export TWILIO_ACCOUNT_SID=your account sid
+   export TWILIO_AUTH_TOKEN=your auth token
+   ```
+
+   Create a new TwiML app at https://www.twilio.com/user/account/apps/add and
+   use its `Sid` as the `TWIML_APPLICATION_SID` environment variable wherever you run this app.
+   ```
+   export TWIML_APPLICATION_SID=your voice application sid
+   ```
+
+4. Create database and run migrations:
 
   _Make sure you have installed [PostgreSQL](http://www.postgresql.org/). If on a Mac, I recommend [Postgres.app](http://postgresapp.com)_
-  
-  
+
    ```
-   rake db:create db:migrate
-   ```
-   
-   Do the same for the test database:
-   ```
-   rake db:test:prepare
+   rake db:setup
    ```
 
-4. Make sure the tests succeed:
+5. Make sure the tests succeed:
    ```
-   rspec spec 
-   ```
-
-5. Run the server:
-   ```
-   rails server 
+   rspec
    ```
 
-6. Check it out at http://localhost:3000
+6. Run the server:
+   ```
+   rails server
+   ```
 
-
-
+7. Check it out at http://localhost:3000
