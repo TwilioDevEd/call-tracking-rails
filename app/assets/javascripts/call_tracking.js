@@ -1,21 +1,24 @@
 $(document).ready(function() {
-  // Make all charts responsive
-  Chart.defaults.global.responsive = true;
-
   $.get('/statistics/leads_by_source/', function(data) {
-    drawPie("#leads-by-source", data);
+    CallTrackingGraph("#leads-by-source", data).draw();
   });
 
   $.get('/statistics/leads_by_city/', function(data) {
-    drawPie("#leads-by-city", data);
+    CallTrackingGraph("#leads-by-city", data).draw();
   });
 });
 
-var drawPie = function(selector, data) {
-  var ctx = getContext(selector);
-  new Chart(ctx).Pie(data);
-}
+CallTrackingGraph = function(selector, data) {
+  function getContext() {
+    return $(selector).get(0).getContext("2d");
+  }
 
-var getContext = function(selector) {
-  return $(selector).get(0).getContext("2d");
+  return {
+    draw: function() {
+      var context = getContext(selector);
+      console.log(data);
+
+      new Chart(context).Pie(data);
+    }
+  }
 }
