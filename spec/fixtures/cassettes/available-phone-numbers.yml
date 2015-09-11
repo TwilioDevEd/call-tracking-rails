@@ -1,0 +1,175 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<TWILIO ACCOUNT SID>:<TWILIO AUTH TOKEN>@api.twilio.com/2010-04-01/Accounts/<TWILIO
+      ACCOUNT SID>/AvailablePhoneNumbers/US/Local.json?AreaCode=415
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - twilio-ruby/3.15.2 (ruby/x86_64-darwin14.0 2.1.5-p273)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - ETag
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 11 Sep 2015 20:11:40 GMT
+      Strict-Transport-Security:
+      - max-age=15768000
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '9698'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"available_phone_numbers": [{"friendly_name": "(415) 612-2747", "phone_number":
+        "+14156122747", "lata": "722", "rate_center": "IGNACIO", "latitude": "38.070200",
+        "longitude": "-122.538600", "region": "CA", "postal_code": null, "iso_country":
+        "US", "address_requirements": "none", "beta": false, "capabilities": {"voice":
+        true, "SMS": true, "MMS": true}}, {"friendly_name": "(415) 991-6213", "phone_number":
+        "+14159916213", "lata": null, "rate_center": null, "latitude": null, "longitude":
+        null, "region": "CA", "postal_code": null, "iso_country": "US", "address_requirements":
+        "none", "beta": false, "capabilities": {"voice": true, "SMS": true, "MMS":
+        true}}, {"friendly_name": "(415) 689-7122", "phone_number": "+14156897122",
+        "lata": "722", "rate_center": "OAKLAND", "latitude": "37.388890", "longitude":
+        "-121.905270", "region": "CA", "postal_code": "95131", "iso_country": "US",
+        "address_requirements": "none", "beta": false, "capabilities": {"voice": true,
+        "SMS": true, "MMS": true}}, {"friendly_name": "(415) 938-5284", "phone_number":
+        "+14159385284", "lata": "722", "rate_center": "POINTREYES", "latitude": null,
+        "longitude": null, "region": "CA", "postal_code": null, "iso_country": "US",
+        "address_requirements": "none", "beta": false, "capabilities": {"voice": true,
+        "SMS": true, "MMS": true}}, {"friendly_name": "(415) 969-4387", "phone_number":
+        "+14159694387", "lata": null, "rate_center": null, "latitude": null, "longitude":
+        null, "region": "CA", "postal_code": null, "iso_country": "US", "address_requirements":
+        "none", "beta": false, "capabilities": {"voice": true, "SMS": true, "MMS":
+        true}}, {"friendly_name": "(415) 969-2666", "phone_number": "+14159692666",
+        "lata": null, "rate_center": null, "latitude": null, "longitude": null, "region":
+        "CA", "postal_code": null, "iso_country": "US", "address_requirements": "none",
+        "beta": false, "capabilities": {"voice": true, "SMS": true, "MMS": true}},
+        {"friendly_name": "(415) 484-4067", "phone_number": "+14154844067", "lata":
+        "722", "rate_center": "STNSN-BLNS", "latitude": "37.890000", "longitude":
+        "-122.630000", "region": "CA", "postal_code": "94941", "iso_country": "US",
+        "address_requirements": "none", "beta": false, "capabilities": {"voice": true,
+        "SMS": true, "MMS": true}}, {"friendly_name": "(415) 991-6671", "phone_number":
+        "+14159916671", "lata": null, "rate_center": null, "latitude": null, "longitude":
+        null, "region": "CA", "postal_code": null, "iso_country": "US", "address_requirements":
+        "none", "beta": false, "capabilities": {"voice": true, "SMS": true, "MMS":
+        true}}, {"friendly_name": "(415) 236-3704", "phone_number": "+14152363704",
+        "lata": "722", "rate_center": "INVERNESS", "latitude": "38.115400", "longitude":
+        "-122.927700", "region": "CA", "postal_code": "94937", "iso_country": "US",
+        "address_requirements": "none", "beta": false, "capabilities": {"voice": true,
+        "SMS": true, "MMS": true}}, {"friendly_name": "(415) 980-7752", "phone_number":
+        "+14159807752", "lata": null, "rate_center": null, "latitude": null, "longitude":
+        null, "region": "CA", "postal_code": null, "iso_country": "US", "address_requirements":
+        "none", "beta": false, "capabilities": {"voice": true, "SMS": true, "MMS":
+        true}}, {"friendly_name": "(415) 521-1525", "phone_number": "+14155211525",
+        "lata": "722", "rate_center": "SAN RAFAEL", "latitude": "37.973500", "longitude":
+        "-122.531100", "region": "CA", "postal_code": "94901", "iso_country": "US",
+        "address_requirements": "none", "beta": false, "capabilities": {"voice": true,
+        "SMS": true, "MMS": true}}, {"friendly_name": "(415) 801-8197", "phone_number":
+        "+14158018197", "lata": null, "rate_center": null, "latitude": null, "longitude":
+        null, "region": "CA", "postal_code": null, "iso_country": "US", "address_requirements":
+        "none", "beta": false, "capabilities": {"voice": true, "SMS": true, "MMS":
+        true}}, {"friendly_name": "(415) 549-0353", "phone_number": "+14155490353",
+        "lata": null, "rate_center": null, "latitude": null, "longitude": null, "region":
+        "CA", "postal_code": null, "iso_country": "US", "address_requirements": "none",
+        "beta": false, "capabilities": {"voice": true, "SMS": true, "MMS": true}},
+        {"friendly_name": "(415) 521-1097", "phone_number": "+14155211097", "lata":
+        "722", "rate_center": "SAN RAFAEL", "latitude": "37.973500", "longitude":
+        "-122.531100", "region": "CA", "postal_code": "94901", "iso_country": "US",
+        "address_requirements": "none", "beta": false, "capabilities": {"voice": true,
+        "SMS": true, "MMS": true}}, {"friendly_name": "(415) 689-1066", "phone_number":
+        "+14156891066", "lata": "722", "rate_center": "OAKLAND", "latitude": "37.388890",
+        "longitude": "-121.905270", "region": "CA", "postal_code": "95131", "iso_country":
+        "US", "address_requirements": "none", "beta": false, "capabilities": {"voice":
+        true, "SMS": true, "MMS": true}}, {"friendly_name": "(415) 408-7162", "phone_number":
+        "+14154087162", "lata": "722", "rate_center": "NOVATO", "latitude": "38.107400",
+        "longitude": "-122.569700", "region": "CA", "postal_code": "94949", "iso_country":
+        "US", "address_requirements": "none", "beta": false, "capabilities": {"voice":
+        true, "SMS": true, "MMS": true}}, {"friendly_name": "(415) 233-9609", "phone_number":
+        "+14152339609", "lata": "722", "rate_center": "SAN RAFAEL", "latitude": "37.973500",
+        "longitude": "-122.531100", "region": "CA", "postal_code": "94901", "iso_country":
+        "US", "address_requirements": "none", "beta": false, "capabilities": {"voice":
+        true, "SMS": true, "MMS": true}}, {"friendly_name": "(415) 801-0598", "phone_number":
+        "+14158010598", "lata": null, "rate_center": null, "latitude": null, "longitude":
+        null, "region": "CA", "postal_code": null, "iso_country": "US", "address_requirements":
+        "none", "beta": false, "capabilities": {"voice": true, "SMS": true, "MMS":
+        true}}, {"friendly_name": "(415) 858-1842", "phone_number": "+14158581842",
+        "lata": "722", "rate_center": "NOVATO", "latitude": "38.107400", "longitude":
+        "-122.569700", "region": "CA", "postal_code": "94945", "iso_country": "US",
+        "address_requirements": "none", "beta": false, "capabilities": {"voice": true,
+        "SMS": true, "MMS": true}}, {"friendly_name": "(415) 858-1837", "phone_number":
+        "+14158581837", "lata": "722", "rate_center": "NOVATO", "latitude": "38.107400",
+        "longitude": "-122.569700", "region": "CA", "postal_code": "94945", "iso_country":
+        "US", "address_requirements": "none", "beta": false, "capabilities": {"voice":
+        true, "SMS": true, "MMS": true}}, {"friendly_name": "(415) 578-7678", "phone_number":
+        "+14155787678", "lata": "722", "rate_center": "SAN RAFAEL", "latitude": "37.970000",
+        "longitude": "-122.520000", "region": "CA", "postal_code": "94903", "iso_country":
+        "US", "address_requirements": "none", "beta": false, "capabilities": {"voice":
+        true, "SMS": true, "MMS": true}}, {"friendly_name": "(415) 463-4490", "phone_number":
+        "+14154634490", "lata": null, "rate_center": null, "latitude": null, "longitude":
+        null, "region": "CA", "postal_code": null, "iso_country": "US", "address_requirements":
+        "none", "beta": false, "capabilities": {"voice": true, "SMS": true, "MMS":
+        true}}, {"friendly_name": "(415) 980-7665", "phone_number": "+14159807665",
+        "lata": null, "rate_center": null, "latitude": null, "longitude": null, "region":
+        "CA", "postal_code": null, "iso_country": "US", "address_requirements": "none",
+        "beta": false, "capabilities": {"voice": true, "SMS": true, "MMS": true}},
+        {"friendly_name": "(415) 938-6935", "phone_number": "+14159386935", "lata":
+        "722", "rate_center": "POINTREYES", "latitude": "38.060000", "longitude":
+        "-122.790000", "region": "CA", "postal_code": "94903", "iso_country": "US",
+        "address_requirements": "none", "beta": false, "capabilities": {"voice": true,
+        "SMS": true, "MMS": true}}, {"friendly_name": "(415) 697-3291", "phone_number":
+        "+14156973291", "lata": null, "rate_center": null, "latitude": null, "longitude":
+        null, "region": "CA", "postal_code": null, "iso_country": "US", "address_requirements":
+        "none", "beta": false, "capabilities": {"voice": true, "SMS": true, "MMS":
+        true}}, {"friendly_name": "(415) 942-9684", "phone_number": "+14159429684",
+        "lata": null, "rate_center": null, "latitude": null, "longitude": null, "region":
+        "CA", "postal_code": null, "iso_country": "US", "address_requirements": "none",
+        "beta": false, "capabilities": {"voice": true, "SMS": true, "MMS": true}},
+        {"friendly_name": "(415) 233-9867", "phone_number": "+14152339867", "lata":
+        "722", "rate_center": "SAN RAFAEL", "latitude": "37.970000", "longitude":
+        "-122.520000", "region": "CA", "postal_code": "94901", "iso_country": "US",
+        "address_requirements": "none", "beta": false, "capabilities": {"voice": true,
+        "SMS": true, "MMS": true}}, {"friendly_name": "(415) 942-9645", "phone_number":
+        "+14159429645", "lata": null, "rate_center": null, "latitude": null, "longitude":
+        null, "region": "CA", "postal_code": null, "iso_country": "US", "address_requirements":
+        "none", "beta": false, "capabilities": {"voice": true, "SMS": true, "MMS":
+        true}}, {"friendly_name": "(415) 858-6984", "phone_number": "+14158586984",
+        "lata": null, "rate_center": null, "latitude": null, "longitude": null, "region":
+        "CA", "postal_code": null, "iso_country": "US", "address_requirements": "none",
+        "beta": false, "capabilities": {"voice": true, "SMS": true, "MMS": true}},
+        {"friendly_name": "(415) 524-0351", "phone_number": "+14155240351", "lata":
+        "722", "rate_center": "SAN RAFAEL", "latitude": "37.970000", "longitude":
+        "-122.520000", "region": "CA", "postal_code": "94903", "iso_country": "US",
+        "address_requirements": "none", "beta": false, "capabilities": {"voice": true,
+        "SMS": true, "MMS": true}}], "uri": "/2010-04-01/Accounts/<TWILIO ACCOUNT
+        SID>/AvailablePhoneNumbers/US/Local.json?AreaCode=415"}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 20:11:40 GMT
+recorded_with: VCR 2.9.3

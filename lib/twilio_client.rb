@@ -21,8 +21,9 @@ class TwilioClient
   end
 
   def purchase_phone_number(phone_number)
+    application_sid = ENV['TWIML_APPLICATION_SID']
     client.incoming_phone_numbers.
-      create(phone_number: phone_number, voice_application_sid: ENV['TWIML_APPLICATION_SID'])
+      create(phone_number: phone_number, voice_application_sid: application_sid)
   end
 
   private

@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<TWILIO ACCOUNT SID>:<TWILIO AUTH TOKEN>@api.twilio.com/2010-04-01/Accounts/<TWILIO
+      ACCOUNT SID>/IncomingPhoneNumbers.json
+    body:
+      encoding: US-ASCII
+      string: PhoneNumber=%2B14152339867&VoiceApplicationSid=<TWIML APPLICATION SID>
+    headers:
+      Accept:
+      - application/json
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - twilio-ruby/3.15.2 (ruby/x86_64-darwin14.0 2.1.5-p273)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - ETag
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 11 Sep 2015 20:21:18 GMT
+      Strict-Transport-Security:
+      - max-age=15768000
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '923'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sid": "PNa970a911b4571523008c737ef6715392", "account_sid": "<TWILIO
+        ACCOUNT SID>", "friendly_name": "(415) 233-9867", "phone_number": "+14152339867",
+        "voice_url": null, "voice_method": "POST", "voice_fallback_url": null, "voice_fallback_method":
+        "POST", "voice_caller_id_lookup": false, "date_created": "Fri, 11 Sep 2015
+        20:21:18 +0000", "date_updated": "Fri, 11 Sep 2015 20:21:18 +0000", "sms_url":
+        "", "sms_method": "POST", "sms_fallback_url": "", "sms_fallback_method": "POST",
+        "address_requirements": "none", "beta": null, "capabilities": {"voice": true,
+        "sms": true, "mms": true}, "status_callback": "", "status_callback_method":
+        "POST", "api_version": "2010-04-01", "voice_application_sid": "<TWIML APPLICATION
+        SID>", "sms_application_sid": "", "trunk_sid": null, "uri": "/2010-04-01/Accounts/<TWILIO
+        ACCOUNT SID>/IncomingPhoneNumbers/PNa970a911b4571523008c737ef6715392.json"}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 20:21:19 GMT
+recorded_with: VCR 2.9.3
