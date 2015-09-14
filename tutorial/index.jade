@@ -159,13 +159,13 @@
       * [Active Record Query
       Interface](http://guides.rubyonrails.org/active_record_querying.html)
 
-  .step(data-file='app/controllers/leads_controller.rb', data-highlight='2-17')
+  .step(data-file='app/controllers/call_tracking_controller.rb', data-highlight='2-17')
     :markdown
       ## Forward calls and create leads
 
       Whenever a customer calls one of our Twilio numbers, Twilio will send a POST 
       request to the URL associated with this action (should be
-      `/leads/create`).
+      `/call-tracking/forward-call`).
 
       We use the incoming call data to create a new `Lead` for a `LeadSource`,
       then return [TwiML](https://www.twilio.com/docs/api/twiml) that connects our caller
@@ -214,7 +214,7 @@
 
       * [Chart.js](http://www.chartjs.org/)
 
-  .step(data-file='app/controllers/leads_controller.rb', data-highlight='4-7')
+  .step(data-file='app/controllers/call_tracking_controller.rb', data-highlight='4-7')
     :markdown
       ## Where to next?
 
