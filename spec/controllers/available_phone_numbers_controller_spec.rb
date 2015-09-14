@@ -7,7 +7,7 @@ describe AvailablePhoneNumbersController do
       available_number = double("Available Number")
       allow(TwilioClient).to receive(:available_phone_numbers).with(area_code) {[available_number]}
 
-      get :index, area_code: area_code
+      get :index, "area-code" => area_code
       expect(assigns(:phone_numbers)).to eq [available_number]
     end
   end
