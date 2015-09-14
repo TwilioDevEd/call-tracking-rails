@@ -1,19 +1,19 @@
-class LeadsController < ApplicationController
+class CallTrackingController < ApplicationController
   skip_before_action :verify_authenticity_token
 
-  def create
+  def forward_call
     lead = Lead.create(lead_params)
-    forward_call(lead_source.forwarding_number)
+    render text: twilio_response.text
   end
 
   private
 
-  def forward_call(phone_number)
-    response = Twilio::TwiML::Response.new do |r|
+  def twilio_response
+    phone_number = lead_source.forwarding_number
+
+    Twilio::TwiML::Response.new do |r|
       r.Dial phone_number
     end
-
-    render text: response.text
   end
 
   def lead_params
