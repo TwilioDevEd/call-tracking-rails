@@ -16,8 +16,6 @@ CallTrackingGraph = function(selector, data) {
   return {
     draw: function() {
       var context = getContext(selector);
-      console.log(data);
-
       new Chart(context).Pie(data);
     }
   }
