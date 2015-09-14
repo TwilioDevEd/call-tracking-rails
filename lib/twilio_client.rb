@@ -16,8 +16,8 @@ class TwilioClient
   end
 
   def available_phone_numbers(area_code = '415')
-   client.available_phone_numbers.
-     get('US').local.list(area_code: area_code).take(10)
+    client.available_phone_numbers.
+      get('US').local.list(area_code: area_code).take(10)
   end
 
   def purchase_phone_number(phone_number)
