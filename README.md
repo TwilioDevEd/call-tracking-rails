@@ -4,7 +4,19 @@
 
 Use Twilio to track the effectiveness of your different marketing campaigns. Learn how call tracking helps organizations in [these Twilio customer stories](https://www.twilio.com/use-cases/call-tracking).
 
-## Running Locally
+## Quickstart
+
+### Create a TwiML App
+
+This project is configured to use a **TwiML App**, which allows us to easily set the voice URLs for all Twilio phone numbers we purchase in this app.
+
+Create a new TwiML app at https://www.twilio.com/user/account/apps/add and use its `Sid` as the `TWIML_APPLICATION_SID` environment variable wherever you run this app.
+
+![Creating a TwiML App](http://howtodocs.s3.amazonaws.com/call-tracking-twiml-app.gif)
+
+You can learn more about TwiML apps here: https://www.twilio.com/help/faq/twilio-client/how-do-i-create-a-twiml-app
+
+### Local development
 
 This project is built using the [Ruby on Rails](http://rubyonrails.org/) web framework. It runs on Ruby 2.2.3.
 
@@ -27,10 +39,9 @@ This project is built using the [Ruby on Rails](http://rubyonrails.org/) web fra
    export TWILIO_AUTH_TOKEN=your auth token
    ```
 
-   Create a new TwiML app at https://www.twilio.com/user/account/apps/add and
-   use its `Sid` as the `TWIML_APPLICATION_SID` environment variable wherever you run this app.
+   Also export the SID for the TwiML App you created above:
    ```
-   export TWIML_APPLICATION_SID=your voice application sid
+   export TWIML_APPLICATION_SID=your twiml app sid
    ```
 
 4. Create database and run migrations:
@@ -51,4 +62,4 @@ This project is built using the [Ruby on Rails](http://rubyonrails.org/) web fra
    rails server
    ```
 
-7. Check it out at http://localhost:3000
+7. Check it out at [http://localhost:3000](http://localhost:3000)
