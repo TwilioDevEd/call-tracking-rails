@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe LeadsController do
+describe CallTrackingController do
   describe "#create" do
 
     before do
@@ -10,12 +10,12 @@ describe LeadsController do
 
     it "creates a lead" do
       expect do
-        post :create, "Called" => '+12568417275', "Caller" => '+12568417333', "FromCity" => 'San Diego', "FromState" => 'CA'
+        post :forward_call, "Called" => '+12568417275', "Caller" => '+12568417333', "FromCity" => 'San Diego', "FromState" => 'CA'
       end.to change(Lead, :count).by(1)
     end
 
     it "renders a TwiML text response" do
-      post :create, "Called" => '+12568417275', "Caller" => '+12568417333', "FromCity" => 'San Diego', "FromState" => 'CA'
+      post :forward_call, "Called" => '+12568417275', "Caller" => '+12568417333', "FromCity" => 'San Diego', "FromState" => 'CA'
       expect(response.body).to eq("<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response><Dial>+593 99 267 0240</Dial></Response>")
     end
   end
