@@ -1,9 +1,9 @@
 .chapter(data-title='Call Tracking with Twilio and Ruby on Rails')
-  .step(data-file='Gemfile')
+  .step(data-file='app/assets/javascripts/call_tracking.js')
     :markdown
       ## What does this thing do?
 
-      This [RoR](http://rubyonrails.org/) web application shows how you can
+      This [Ruby on Rails](http://rubyonrails.org/) web application shows how you can
       use Twilio to track the effectiveness of different marketing channels.
 
       ![Call tracking home page](http://howtodocs.s3.amazonaws.com/call-tracking-home.png)
@@ -31,10 +31,10 @@
 
       * [Twilio Ruby Helper Library](https://github.com/twilio/twilio-ruby)
       * [Twilio REST API docs](https://www.twilio.com/docs/api)
-      * [Ruby Docs](https://rubydocs.org/)
+      * [Rails Docs](http://rubyonrails.org/documentation/)
       * [What is Call Tracking?](http://www.searchenginejournal.com/seo-beginner-guide-call-tracking-care/83173/)
 
-  .step(data-file='lib/twilio_client.rb', data-highlight='10-21')
+  .step(data-file='lib/twilio_client.rb', data-highlight='1-21')
     :markdown
       ## Search for available phone numbers
 
@@ -72,13 +72,13 @@
       * [Action Controller
       Overview](http://guides.rubyonrails.org/action_controller_overview.html)
 
-  .step(data-file='lib/twilio_client.rb', data-highlight='10-16, 23-27')
+  .step(data-file='lib/twilio_client.rb', data-highlight='23-27')
     :markdown
       ## Buy a phone number
 
       Our `purchase_phone_number` method takes a phone number as its
-      sole parameter and uses our Twilio API client to actually purchase one of
-      the available phone numbers we searched for earlier.
+      sole parameter and uses our Twilio API client to purchase the
+      available phone number our user chooses.
 
       ---
 
@@ -94,7 +94,7 @@
 
       When we purchase a phone number, we specify a voice application SID. This is
       an identifier for a [TwiML application](https://www.twilio.com/help/faq/twilio-client/how-do-i-create-a-twiml-app),
-      which you can create one through the [REST API](https://www.twilio.com/docs/api/rest/applications) 
+      which you can create through the [REST API](https://www.twilio.com/docs/api/rest/applications)
       or [account portal](https://www.twilio.com/user/account/apps).
 
       ![Creating a TwiML app](http://howtodocs.s3.amazonaws.com/call-tracking-twiml-app.gif)
@@ -112,8 +112,6 @@
 
       **See also:**
 
-      * [Action Controller
-      Overview](http://guides.rubyonrails.org/action_controller_overview.html)
       * [Rails Flash
       Messages](http://guides.rubyonrails.org/action_controller_overview.html#the-flash)
       * [Rails
@@ -159,7 +157,7 @@
       * [Active Record Query
       Interface](http://guides.rubyonrails.org/active_record_querying.html)
 
-  .step(data-file='app/controllers/call_tracking_controller.rb', data-highlight='2-17')
+  .step(data-file='app/controllers/call_tracking_controller.rb')
     :markdown
       ## Forward calls and create leads
 
@@ -214,7 +212,7 @@
 
       * [Chart.js](http://www.chartjs.org/)
 
-  .step(data-file='app/controllers/call_tracking_controller.rb', data-highlight='4-7')
+  .step(data-file='app/assets/javascripts/call_tracking.js')
     :markdown
       ## Where to next?
 
@@ -230,11 +228,11 @@
 
       Put a button on your web page that connects visitors to live support or sales people via telephone.
 
-      [**Appointment Reminders
-      (Rails)**](https://www.twilio.com/docs/howto/walkthrough/appointment-reminders/ruby/rails)
+      [**IVR Phone Tree
+      (Rails)**](https://www.twilio.com/docs/howto/walkthrough/ivr-phone-tree/ruby/rails)
 
-      Send your customers automatic reminders ahead of appoiments using Twilio
-      SMS.
+      Connect your callers to an IVR (interactive voice response), allowing them
+      to make selections about how their call should be routed.
 
       Thanks for checking out this tutorial! If you have any feedback to share
       with us, we'd love to hear it. Tweet [@twilio](https://twitter.com/twilio)

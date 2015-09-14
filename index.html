@@ -9,8 +9,8 @@
 .wrapper {
   height:100%;
   width:100%;
-}</style><link rel="shortcut icon" href="//twilio.com/bundles/marketing/img/favicons/favicon.ico"><link rel="apple-touch-icon" href="//twilio.com/bundles/marketing/img/favicons/favicon_57.png"><link rel="apple-touch-icon" sizes="72x72" href="//twilio.com/bundles/marketing/img/favicons/favicon_72.png"><link rel="apple-touch-icon" sizes="114x114" href="//twilio.com/bundles/marketing/img/favicons/favicon_114.png"><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"><link rel="stylesheet" href="viewsaurus.css"></head><body><div class="wrapper"><div id="viewsaurus" data-title="Call Tracking"><div class="saurus-panes"><div class="saurus-prose"><div class="saurus-prose-header"><div class="title-outer"><span class="step-title">Call Tracking</span></div></div><div class="saurus-nav-buttons"><div class="saurus-nav-button nav-overview"><div class="saurus-nav-button-inner"><i class="fa fa-fw fa-list"></i></div><div class="nav-divider"></div></div><div class="saurus-nav-button nav-previous"><div class="saurus-nav-button-inner"><a href=""> <i class="fa fa-fw fa-play fa-rotate-180"></i></a></div><div class="nav-divider"></div></div><div class="saurus-nav-button nav-next clickable"><div class="saurus-nav-button-inner"><a href="#1"> <i class="fa fa-fw fa-play"></i></a></div></div><div class="saurus-next-title"><span class="next-title-inner"></span></div></div><div class="saurus-progress-bar"></div><div class="saurus-start"><p>Use Twilio to track the effectiveness of your marketing campaigns. Let's get started!</p><a href="#0">Start Tutorial</a></div><div class="saurus-content"><div data-title="Call Tracking with Twilio and Ruby on Rails" class="chapter"><div data-file="Gemfile" class="step"><h2 id="what-does-this-thing-do-">What does this thing do?</h2>
-<p>This <a href="http://rubyonrails.org/">RoR</a> web application shows how you can
+}</style><link rel="shortcut icon" href="//twilio.com/bundles/marketing/img/favicons/favicon.ico"><link rel="apple-touch-icon" href="//twilio.com/bundles/marketing/img/favicons/favicon_57.png"><link rel="apple-touch-icon" sizes="72x72" href="//twilio.com/bundles/marketing/img/favicons/favicon_72.png"><link rel="apple-touch-icon" sizes="114x114" href="//twilio.com/bundles/marketing/img/favicons/favicon_114.png"><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"><link rel="stylesheet" href="viewsaurus.css"></head><body><div class="wrapper"><div id="viewsaurus" data-title="Call Tracking"><div class="saurus-panes"><div class="saurus-prose"><div class="saurus-prose-header"><div class="title-outer"><span class="step-title">Call Tracking</span></div></div><div class="saurus-nav-buttons"><div class="saurus-nav-button nav-overview"><div class="saurus-nav-button-inner"><i class="fa fa-fw fa-list"></i></div><div class="nav-divider"></div></div><div class="saurus-nav-button nav-previous"><div class="saurus-nav-button-inner"><a href=""> <i class="fa fa-fw fa-play fa-rotate-180"></i></a></div><div class="nav-divider"></div></div><div class="saurus-nav-button nav-next clickable"><div class="saurus-nav-button-inner"><a href="#1"> <i class="fa fa-fw fa-play"></i></a></div></div><div class="saurus-next-title"><span class="next-title-inner"></span></div></div><div class="saurus-progress-bar"></div><div class="saurus-start"><p>Use Twilio to track the effectiveness of your marketing campaigns. Let's get started!</p><a href="#0">Start Tutorial</a></div><div class="saurus-content"><div data-title="Call Tracking with Twilio and Ruby on Rails" class="chapter"><div data-file="app/assets/javascripts/call_tracking.js" class="step"><h2 id="what-does-this-thing-do-">What does this thing do?</h2>
+<p>This <a href="http://rubyonrails.org/">Ruby on Rails</a> web application shows how you can
 use Twilio to track the effectiveness of different marketing channels.</p>
 <p><img src="http://howtodocs.s3.amazonaws.com/call-tracking-home.png" alt="Call tracking home page"></p>
 <p>This application has three main features:</p>
@@ -33,10 +33,10 @@ code snippet.</p>
 <ul>
 <li><a href="https://github.com/twilio/twilio-ruby">Twilio Ruby Helper Library</a></li>
 <li><a href="https://www.twilio.com/docs/api">Twilio REST API docs</a></li>
-<li><a href="https://rubydocs.org/">Ruby Docs</a></li>
+<li><a href="http://rubyonrails.org/documentation/">Rails Docs</a></li>
 <li><a href="http://www.searchenginejournal.com/seo-beginner-guide-call-tracking-care/83173/">What is Call Tracking?</a></li>
 </ul>
-</div><div data-file="lib/twilio_client.rb" data-highlight="10-21" class="step"><h2 id="search-for-available-phone-numbers">Search for available phone numbers</h2>
+</div><div data-file="lib/twilio_client.rb" data-highlight="1-21" class="step"><h2 id="search-for-available-phone-numbers">Search for available phone numbers</h2>
 <p>Call tracking requires us to search for and buy phone numbers on demand,
 associating a specific phone number with a lead source. This utility module
 uses the <a href="http://twilio-ruby.readthedocs.org/en/latest/usage/basics.html">twilio-ruby helper
@@ -63,10 +63,10 @@ will render the view that contains a list of numbers they can choose to buy.</p>
 <li><a href="http://guides.rubyonrails.org/action_controller_overview.html">Action Controller
 Overview</a></li>
 </ul>
-</div><div data-file="lib/twilio_client.rb" data-highlight="10-16, 23-27" class="step"><h2 id="buy-a-phone-number">Buy a phone number</h2>
+</div><div data-file="lib/twilio_client.rb" data-highlight="23-27" class="step"><h2 id="buy-a-phone-number">Buy a phone number</h2>
 <p>Our <code>purchase_phone_number</code> method takes a phone number as its
-sole parameter and uses our Twilio API client to actually purchase one of
-the available phone numbers we searched for earlier.</p>
+sole parameter and uses our Twilio API client to purchase the
+available phone number our user chooses.</p>
 <hr>
 <p><strong>See also:</strong></p>
 <ul>
@@ -77,7 +77,7 @@ twilio-ruby</a></li>
 </div><div data-file="lib/twilio_client.rb" data-highlight="23-27" class="step"><h2 id="set-webhook-urls-in-a-twiml-application">Set webhook URLs in a TwiML Application</h2>
 <p>When we purchase a phone number, we specify a voice application SID. This is
 an identifier for a <a href="https://www.twilio.com/help/faq/twilio-client/how-do-i-create-a-twiml-app">TwiML application</a>,
-which you can create one through the <a href="https://www.twilio.com/docs/api/rest/applications">REST API</a> 
+which you can create through the <a href="https://www.twilio.com/docs/api/rest/applications">REST API</a>
 or <a href="https://www.twilio.com/user/account/apps">account portal</a>.</p>
 <p><img src="http://howtodocs.s3.amazonaws.com/call-tracking-twiml-app.gif" alt="Creating a TwiML app"></p>
 </div><div data-file="app/controllers/lead_sources_controller.rb" data-highlight="7-14" class="step"><h2 id="associate-a-phone-number-with-a-lead-source">Associate a phone number with a lead source</h2>
@@ -87,8 +87,6 @@ Any phone calls to our new Twilio number will be attributed to this source.</p>
 <hr>
 <p><strong>See also:</strong></p>
 <ul>
-<li><a href="http://guides.rubyonrails.org/action_controller_overview.html">Action Controller
-Overview</a></li>
 <li><a href="http://guides.rubyonrails.org/action_controller_overview.html#the-flash">Rails Flash
 Messages</a></li>
 <li><a href="http://api.rubyonrails.org/classes/ActionController/Redirecting.html">Rails
@@ -124,7 +122,7 @@ Associations</a></li>
 <li><a href="http://guides.rubyonrails.org/active_record_querying.html">Active Record Query
 Interface</a></li>
 </ul>
-</div><div data-file="app/controllers/call_tracking_controller.rb" data-highlight="2-17" class="step"><h2 id="forward-calls-and-create-leads">Forward calls and create leads</h2>
+</div><div data-file="app/controllers/call_tracking_controller.rb" class="step"><h2 id="forward-calls-and-create-leads">Forward calls and create leads</h2>
 <p>Whenever a customer calls one of our Twilio numbers, Twilio will send a POST 
 request to the URL associated with this action (should be
 <code>/call-tracking/forward-call</code>).</p>
@@ -162,7 +160,7 @@ We display the stats in colorful pie charts we create with <a href="http://www.c
 <ul>
 <li><a href="http://www.chartjs.org/">Chart.js</a></li>
 </ul>
-</div><div data-file="app/controllers/call_tracking_controller.rb" data-highlight="4-7" class="step"><h2 id="where-to-next-">Where to next?</h2>
+</div><div data-file="app/assets/javascripts/call_tracking.js" class="step"><h2 id="where-to-next-">Where to next?</h2>
 <p>That&#39;s it! Our Ruby on Rails application is now ready to purchase new phone
 numbers, forward incoming calls, and record some statistics for our
 business.</p>
@@ -171,21 +169,20 @@ tutorials:</p>
 <p><a href="https://www.twilio.com/docs/howto/walkthrough/click-to-call/ruby/rails"><strong>Click-To-Call
 (Rails)</strong></a></p>
 <p>Put a button on your web page that connects visitors to live support or sales people via telephone.</p>
-<p><a href="https://www.twilio.com/docs/howto/walkthrough/appointment-reminders/ruby/rails"><strong>Appointment Reminders
+<p><a href="https://www.twilio.com/docs/howto/walkthrough/ivr-phone-tree/ruby/rails"><strong>IVR Phone Tree
 (Rails)</strong></a></p>
-<p>Send your customers automatic reminders ahead of appoiments using Twilio
-SMS.</p>
+<p>Connect your callers to an IVR (interactive voice response), allowing them
+to make selections about how their call should be routed.</p>
 <p>Thanks for checking out this tutorial! If you have any feedback to share
 with us, we&#39;d love to hear it. Tweet <a href="https://twitter.com/twilio">@twilio</a>
 to let us know what you think.</p>
 </div></div>
-<div class="saurus-files" style="display:none;"><textarea class="saurus-file" data-file="Gemfile" data-mode="ruby">c291cmNlICdodHRwczovL3J1YnlnZW1zLm9yZycKCmdlbSAncmFpbHMnLCAnNC4yLjAnCmdlbSAnc3FsaXRlMycKZ2VtICdwZycKCiMgR2VtcyB1c2VkIG9ubHkgZm9yIGFzc2V0cyBhbmQgbm90IHJlcXVpcmVkCiMgaW4gcHJvZHVjdGlvbiBlbnZpcm9ubWVudHMgYnkgZGVmYXVsdC4KZ3JvdXAgOmFzc2V0cyBkbwogIGdlbSAnc2Fzcy1yYWlscycsICAgJ34+IDUuMCcKICBnZW0gJ2NvZmZlZS1yYWlscycsICd+PiA0LjEuMCcKICBnZW0gJ3VnbGlmaWVyJywgJz49IDEuMy4wJwplbmQKCmdlbSAnYm9vdHN0cmFwLXNhc3MnLCAnfj4gMy4zLjUnCmdlbSAnanF1ZXJ5LXJhaWxzJwpnZW0gJ3R1cmJvbGlua3MnCmdlbSAndHdpbGlvLXJ1YnknCmdlbSAnZ2xvYmFsX3Bob25lJwoKZ3JvdXAgOnRlc3QgZG8KICBnZW0gJ2J5ZWJ1ZycKICBnZW0gJ2ZhY3RvcnlfZ2lybF9yYWlscycsICJ+PiA0LjAiCiAgZ2VtICdyc3BlYy1yYWlscycKICBnZW0gJ2RhdGFiYXNlX2NsZWFuZXInCiAgZ2VtICd2Y3InCiAgZ2VtICd3ZWJtb2NrJwplbmQK</textarea>
+<div class="saurus-files" style="display:none;"><textarea class="saurus-file" data-file="app/assets/javascripts/call_tracking.js" data-mode="javascript">JChkb2N1bWVudCkucmVhZHkoZnVuY3Rpb24oKSB7CiAgJC5nZXQoJy9zdGF0aXN0aWNzL2xlYWRzX2J5X3NvdXJjZS8nLCBmdW5jdGlvbihkYXRhKSB7CiAgICBDYWxsVHJhY2tpbmdHcmFwaCgiI2xlYWRzLWJ5LXNvdXJjZSIsIGRhdGEpLmRyYXcoKTsKICB9KTsKCiAgJC5nZXQoJy9zdGF0aXN0aWNzL2xlYWRzX2J5X2NpdHkvJywgZnVuY3Rpb24oZGF0YSkgewogICAgQ2FsbFRyYWNraW5nR3JhcGgoIiNsZWFkcy1ieS1jaXR5IiwgZGF0YSkuZHJhdygpOwogIH0pOwp9KTsKCkNhbGxUcmFja2luZ0dyYXBoID0gZnVuY3Rpb24oc2VsZWN0b3IsIGRhdGEpIHsKICBmdW5jdGlvbiBnZXRDb250ZXh0KCkgewogICAgcmV0dXJuICQoc2VsZWN0b3IpLmdldCgwKS5nZXRDb250ZXh0KCIyZCIpOwogIH0KCiAgcmV0dXJuIHsKICAgIGRyYXc6IGZ1bmN0aW9uKCkgewogICAgICB2YXIgY29udGV4dCA9IGdldENvbnRleHQoc2VsZWN0b3IpOwogICAgICBuZXcgQ2hhcnQoY29udGV4dCkuUGllKGRhdGEpOwogICAgfQogIH0KfQo=</textarea>
 <textarea class="saurus-file" data-file="lib/twilio_client.rb" data-mode="ruby">Y2xhc3MgVHdpbGlvQ2xpZW50CiAgZGVmIHNlbGYuYXZhaWxhYmxlX3Bob25lX251bWJlcnMoYXJlYV9jb2RlKQogICAgbmV3LmF2YWlsYWJsZV9waG9uZV9udW1iZXJzKGFyZWFfY29kZSkKICBlbmQKCiAgZGVmIHNlbGYucHVyY2hhc2VfcGhvbmVfbnVtYmVyKHBob25lX251bWJlcikKICAgIG5ldy5wdXJjaGFzZV9waG9uZV9udW1iZXIocGhvbmVfbnVtYmVyKQogIGVuZAoKICBkZWYgaW5pdGlhbGl6ZQogICAgIyBUbyBmaW5kIFRXSUxJT19BQ0NPVU5UX1NJRCwgVFdJTElPX0FVVEhfVE9LRU4gdmlzaXQKICAgICMgaHR0cHM6Ly93d3cudHdpbGlvLmNvbS91c2VyL2FjY291bnQKICAgIGFjY291bnRfc2lkID0gRU5WWydUV0lMSU9fQUNDT1VOVF9TSUQnXQogICAgYXV0aF90b2tlbiAgPSBFTlZbJ1RXSUxJT19BVVRIX1RPS0VOJ10KICAgIEBjbGllbnQgPSBUd2lsaW86OlJFU1Q6OkNsaWVudC5uZXcgYWNjb3VudF9zaWQsIGF1dGhfdG9rZW4KICBlbmQKCiAgZGVmIGF2YWlsYWJsZV9waG9uZV9udW1iZXJzKGFyZWFfY29kZSA9ICc0MTUnKQogICAgY2xpZW50LmF2YWlsYWJsZV9waG9uZV9udW1iZXJzLgogICAgICBnZXQoJ1VTJykubG9jYWwubGlzdChhcmVhX2NvZGU6IGFyZWFfY29kZSkudGFrZSgxMCkKICBlbmQKCiAgZGVmIHB1cmNoYXNlX3Bob25lX251bWJlcihwaG9uZV9udW1iZXIpCiAgICBhcHBsaWNhdGlvbl9zaWQgPSBFTlZbJ1RXSU1MX0FQUExJQ0FUSU9OX1NJRCddCiAgICBjbGllbnQuaW5jb21pbmdfcGhvbmVfbnVtYmVycy4KICAgICAgY3JlYXRlKHBob25lX251bWJlcjogcGhvbmVfbnVtYmVyLCB2b2ljZV9hcHBsaWNhdGlvbl9zaWQ6IGFwcGxpY2F0aW9uX3NpZCkKICBlbmQKCiAgcHJpdmF0ZQoKICBhdHRyX3JlYWRlciA6Y2xpZW50CmVuZAo=</textarea>
 <textarea class="saurus-file" data-file="app/controllers/available_phone_numbers_controller.rb" data-mode="ruby">Y2xhc3MgQXZhaWxhYmxlUGhvbmVOdW1iZXJzQ29udHJvbGxlciA8IEFwcGxpY2F0aW9uQ29udHJvbGxlcgogIGRlZiBpbmRleAogICAgYXJlYV9jb2RlID0gcGFyYW1zWyJhcmVhLWNvZGUiXQogICAgIyBUd2lsaW9DbGllbnQgaXMgYSB0aGluIHdyYXBwZXIgZm9yIFR3aWxpbzo6UkVTVDo6Q2xpZW50CiAgICBAcGhvbmVfbnVtYmVycyA9IDo6VHdpbGlvQ2xpZW50LmF2YWlsYWJsZV9waG9uZV9udW1iZXJzKGFyZWFfY29kZSkKICBlbmQKZW5kCg==</textarea>
 <textarea class="saurus-file" data-file="app/controllers/lead_sources_controller.rb" data-mode="ruby">Y2xhc3MgTGVhZFNvdXJjZXNDb250cm9sbGVyIDwgQXBwbGljYXRpb25Db250cm9sbGVyCiAgYmVmb3JlX2ZpbHRlciA6ZmluZF9sZWFkX3NvdXJjZSwgb25seTogWzplZGl0LCA6dXBkYXRlXQoKICBkZWYgZWRpdAogIGVuZAoKICBkZWYgY3JlYXRlCiAgICBwaG9uZV9udW1iZXIgPSBwYXJhbXNbOmZvcm1hdF0KICAgIHR3aWxpb19udW1iZXIgPSBUd2lsaW9DbGllbnQucHVyY2hhc2VfcGhvbmVfbnVtYmVyKHBob25lX251bWJlcikKICAgIGxlYWRfc291cmNlID0gTGVhZFNvdXJjZS5jcmVhdGUobmFtZTogJycsIGluY29taW5nX251bWJlcjogdHdpbGlvX251bWJlci5mcmllbmRseV9uYW1lKQoKICAgIG1lc3NhZ2UgID0gIlBob25lIG51bWJlciAje3R3aWxpb19udW1iZXIuZnJpZW5kbHlfbmFtZX0gaGFzIGJlZW4gcHVyY2hhc2VkLiBQbGVhc2UgYWRkIGEgbmFtZSBmb3IgdGhpcyBsZWFkIHNvdXJjZSIKICAgIHJlZGlyZWN0X3RvIGVkaXRfbGVhZF9zb3VyY2VfcGF0aChsZWFkX3NvdXJjZSksIG5vdGljZTogbWVzc2FnZQogIGVuZAoKICBkZWYgdXBkYXRlCiAgICBpZiBAbGVhZF9zb3VyY2UudXBkYXRlX2F0dHJpYnV0ZXMobGVhZF9zb3VyY2VzX3BhcmFtcykKICAgICAgcmVkaXJlY3RfdG8gcm9vdF91cmwsIG5vdGljZTogJ0xlYWQgc291cmNlIHN1Y2Nlc3NmdWxseSB1cGRhdGVkLicKICAgIGVuZAogIGVuZAoKICBwcml2YXRlCgogIGRlZiBmaW5kX2xlYWRfc291cmNlCiAgICBAbGVhZF9zb3VyY2UgPSBMZWFkU291cmNlLmZpbmQocGFyYW1zWzppZF0pCiAgZW5kCgogIGRlZiBsZWFkX3NvdXJjZXNfcGFyYW1zCiAgICBwYXJhbXMucmVxdWlyZSg6bGVhZF9zb3VyY2UpLnBlcm1pdCg6bmFtZSwgOmZvcndhcmRpbmdfbnVtYmVyKQogIGVuZAplbmQK</textarea>
 <textarea class="saurus-file" data-file="app/models/lead_source.rb" data-mode="ruby">Y2xhc3MgTGVhZFNvdXJjZSA8IEFjdGl2ZVJlY29yZDo6QmFzZQogIGhhc19tYW55IDpsZWFkcwoKICBkZWYgc2VsZi5jb3VudF9sZWFkcwogICAgam9pbnMoOmxlYWRzKS5ncm91cCg6bmFtZSkub3JkZXIoOm5hbWUpLmNvdW50CiAgZW5kCgogIGRlZiB0b19zdHIKICAgICIje25hbWUgfHwgIihubyB5ZXQgbmFtZWQpIn0gLSAje2luY29taW5nX251bWJlcn0iCiAgZW5kCmVuZAo=</textarea>
 <textarea class="saurus-file" data-file="app/models/lead.rb" data-mode="ruby">Y2xhc3MgTGVhZCA8IEFjdGl2ZVJlY29yZDo6QmFzZQogIGJlbG9uZ3NfdG8gOmxlYWRfc291cmNlCgogIGRlZiBzZWxmLmNvdW50X2J5X2NpdHkKICAgIGdyb3VwKDpjaXR5KS5jb3VudAogIGVuZAoKICBkZWYgdG9fc3RyCiAgICAiI3tjaXR5fSwgI3tzdGF0ZX0iCiAgZW5kCmVuZAo=</textarea>
 <textarea class="saurus-file" data-file="app/controllers/call_tracking_controller.rb" data-mode="ruby">Y2xhc3MgQ2FsbFRyYWNraW5nQ29udHJvbGxlciA8IEFwcGxpY2F0aW9uQ29udHJvbGxlcgogIHNraXBfYmVmb3JlX2FjdGlvbiA6dmVyaWZ5X2F1dGhlbnRpY2l0eV90b2tlbgoKICBkZWYgZm9yd2FyZF9jYWxsCiAgICBsZWFkID0gTGVhZC5jcmVhdGUobGVhZF9wYXJhbXMpCiAgICByZW5kZXIgdGV4dDogdHdpbGlvX3Jlc3BvbnNlLnRleHQKICBlbmQKCiAgcHJpdmF0ZQoKICBkZWYgdHdpbGlvX3Jlc3BvbnNlCiAgICBwaG9uZV9udW1iZXIgPSBsZWFkX3NvdXJjZS5mb3J3YXJkaW5nX251bWJlcgoKICAgIFR3aWxpbzo6VHdpTUw6OlJlc3BvbnNlLm5ldyBkbyB8cnwKICAgICAgci5EaWFsIHBob25lX251bWJlcgogICAgZW5kCiAgZW5kCgogIGRlZiBsZWFkX3BhcmFtcwogICAgewogICAgICBsZWFkX3NvdXJjZTogbGVhZF9zb3VyY2UsCiAgICAgIHBob25lX251bWJlcjogcGFyYW1zWzpDYWxsZXJdLAogICAgICBjaXR5OiBwYXJhbXNbOkZyb21DaXR5XSwKICAgICAgc3RhdGU6IHBhcmFtc1s6RnJvbVN0YXRlXSwKICAgIH0KICBlbmQKCiAgZGVmIGxlYWRfc291cmNlCiAgICBpbmNvbWluZ19udW1iZXIgPSBHbG9iYWxQaG9uZS5wYXJzZShwYXJhbXNbOkNhbGxlZF0pLm5hdGlvbmFsX2Zvcm1hdAogICAgTGVhZFNvdXJjZS5maW5kX2J5X2luY29taW5nX251bWJlcihpbmNvbWluZ19udW1iZXIpCiAgZW5kCmVuZAo=</textarea>
-<textarea class="saurus-file" data-file="app/assets/javascripts/call_tracking.js" data-mode="javascript">JChkb2N1bWVudCkucmVhZHkoZnVuY3Rpb24oKSB7CiAgJC5nZXQoJy9zdGF0aXN0aWNzL2xlYWRzX2J5X3NvdXJjZS8nLCBmdW5jdGlvbihkYXRhKSB7CiAgICBDYWxsVHJhY2tpbmdHcmFwaCgiI2xlYWRzLWJ5LXNvdXJjZSIsIGRhdGEpLmRyYXcoKTsKICB9KTsKCiAgJC5nZXQoJy9zdGF0aXN0aWNzL2xlYWRzX2J5X2NpdHkvJywgZnVuY3Rpb24oZGF0YSkgewogICAgQ2FsbFRyYWNraW5nR3JhcGgoIiNsZWFkcy1ieS1jaXR5IiwgZGF0YSkuZHJhdygpOwogIH0pOwp9KTsKCkNhbGxUcmFja2luZ0dyYXBoID0gZnVuY3Rpb24oc2VsZWN0b3IsIGRhdGEpIHsKICBmdW5jdGlvbiBnZXRDb250ZXh0KCkgewogICAgcmV0dXJuICQoc2VsZWN0b3IpLmdldCgwKS5nZXRDb250ZXh0KCIyZCIpOwogIH0KCiAgcmV0dXJuIHsKICAgIGRyYXc6IGZ1bmN0aW9uKCkgewogICAgICB2YXIgY29udGV4dCA9IGdldENvbnRleHQoc2VsZWN0b3IpOwogICAgICBuZXcgQ2hhcnQoY29udGV4dCkuUGllKGRhdGEpOwogICAgfQogIH0KfQo=</textarea>
 </div>
 </div><div class="saurus-overview"><ul></ul></div></div><div class="saurus-code"><div class="file-path"><span class="crumb-container"></span><i class="fa fa-fw fa-folder"></i></div><div class="saurus-editor"></div></div><div class="saurus-explorer"><div class="saurus-file-list"></div><a href="https://github.com/TwilioDevEd/call-tracking-rails" target="_blank" class="explorer-get-code"> <i class="fa fa-lg fa-github-square"> </i>View Code on GitHub</a></div></div></div></div><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script><script src="ace/ace.js"></script><script src="ace/theme-monokai.js"></script><script src="viewsaurus.js"></script></body></html>
