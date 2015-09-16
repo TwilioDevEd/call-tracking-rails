@@ -39,7 +39,7 @@
       ## Search for available phone numbers
 
       Call tracking requires us to search for and buy phone numbers on demand,
-      associating a specific phone number with a lead source. This utility module
+      associating a specific phone number with a lead source. This utility class
       uses the [twilio-ruby helper
       library](http://twilio-ruby.readthedocs.org/en/latest/usage/basics.html)
       to search for phone numbers by area code and return a list of numbers
@@ -199,10 +199,11 @@
     :markdown
       ## Visualize our statistics with Chart.js
 
-      Back on the home page, we fetch call tracking statistics 
-      [in JSON from the server](https://docs.djangoproject.com/en/1.8/ref/request-response/#jsonresponse-objects) 
-      using [jQuery](https://api.jquery.com/jquery.get/).
-      We display the stats in colorful pie charts we create with [Chart.js](http://www.chartjs.org/). 
+      Back on the home page, we fetch call tracking statistics
+      [in JSON from the
+      server](http://guides.rubyonrails.org/layouts_and_rendering.html)
+      using [jQuery](https://api.jquery.com/jquery.get/)
+      We display the stats in colorful pie charts we create with [Chart.js](http://www.chartjs.org/).
 
       ![Call tracking charts](http://howtodocs.s3.amazonaws.com/call-tracking-charts.png)
 
@@ -211,6 +212,7 @@
       **See also:**
 
       * [Chart.js](http://www.chartjs.org/)
+      * [Layouts and Rendering](http://guides.rubyonrails.org/layouts_and_rendering.html)
 
   .step(data-file='app/assets/javascripts/call_tracking.js')
     :markdown

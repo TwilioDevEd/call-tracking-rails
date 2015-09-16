@@ -38,7 +38,7 @@ code snippet.</p>
 </ul>
 </div><div data-file="lib/twilio_client.rb" data-highlight="1-21" class="step"><h2 id="search-for-available-phone-numbers">Search for available phone numbers</h2>
 <p>Call tracking requires us to search for and buy phone numbers on demand,
-associating a specific phone number with a lead source. This utility module
+associating a specific phone number with a lead source. This utility class
 uses the <a href="http://twilio-ruby.readthedocs.org/en/latest/usage/basics.html">twilio-ruby helper
 library</a>
 to search for phone numbers by area code and return a list of numbers
@@ -150,15 +150,17 @@ twilio-ruby</a></li>
 Interface</a></li>
 </ul>
 </div><div data-file="app/assets/javascripts/call_tracking.js" class="step"><h2 id="visualize-our-statistics-with-chart-js">Visualize our statistics with Chart.js</h2>
-<p>Back on the home page, we fetch call tracking statistics 
-<a href="https://docs.djangoproject.com/en/1.8/ref/request-response/#jsonresponse-objects">in JSON from the server</a> 
-using <a href="https://api.jquery.com/jquery.get/">jQuery</a>.
-We display the stats in colorful pie charts we create with <a href="http://www.chartjs.org/">Chart.js</a>. </p>
+<p>Back on the home page, we fetch call tracking statistics
+<a href="http://guides.rubyonrails.org/layouts_and_rendering.html">in JSON from the
+server</a>
+using <a href="https://api.jquery.com/jquery.get/">jQuery</a>
+We display the stats in colorful pie charts we create with <a href="http://www.chartjs.org/">Chart.js</a>.</p>
 <p><img src="http://howtodocs.s3.amazonaws.com/call-tracking-charts.png" alt="Call tracking charts"></p>
 <hr>
 <p><strong>See also:</strong></p>
 <ul>
 <li><a href="http://www.chartjs.org/">Chart.js</a></li>
+<li><a href="http://guides.rubyonrails.org/layouts_and_rendering.html">Layouts and Rendering</a></li>
 </ul>
 </div><div data-file="app/assets/javascripts/call_tracking.js" class="step"><h2 id="where-to-next-">Where to next?</h2>
 <p>That&#39;s it! Our Ruby on Rails application is now ready to purchase new phone
