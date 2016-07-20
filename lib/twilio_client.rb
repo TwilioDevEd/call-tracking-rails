@@ -26,9 +26,18 @@ class TwilioClient
       create(phone_number: phone_number, voice_application_sid: application_sid)
   end
 
-  private
+  def list_applications(options={})
+    @client.account.applications.list(options)
+  end
+
+  def create_default_application(options={})
+    options = options.merge(friendly_name: DEFAULT_APPLICATION_NAME)
+    @client.account.applications.create(options)
+  end
 
   DEFAULT_APPLICATION_NAME = 'Call tracking app'
+
+  private
 
   def sid
     applications = @client.account.applications.list(friendly_name: DEFAULT_APPLICATION_NAME)
