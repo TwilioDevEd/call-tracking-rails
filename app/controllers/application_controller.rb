@@ -14,7 +14,9 @@ class ApplicationController < ActionController::Base
         friendly_name: TwilioClient::DEFAULT_APPLICATION_NAME
       )
       if applications.any?
-        ENV["TWIML_APPLICATION_SID"] = applications.first.sid
+        application = applications.first
+        application.update(:voice_url => "#{request.base_url}/call-tracking/forward-call")
+        ENV["TWIML_APPLICATION_SID"] = application.sid
       else
         application = @client.create_default_application(
           :voice_url => "#{request.base_url}/call-tracking/forward-call"
