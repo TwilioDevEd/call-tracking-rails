@@ -1,0 +1,30 @@
+{
+  "name": "Call Tracking (Rails)",
+  "description": "Call Tracking in Rails with Twilio",
+  "repository": "https://github.com/TwilioDevEd/call-tracking-rails",
+  "keywords": [
+    "phone", "twilio", "call tracking", "automation", "ruby", "rails"
+  ],
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "env": {
+    "TWILIO_ACCOUNT_SID": {
+      "description": "Your Twilio account secret ID, you can find at: https://www.twilio.com/user/account",
+      "value": "enter_your_account_sid_here",
+      "required": true
+    },
+    "TWILIO_AUTH_TOKEN": {
+      "description": "Your secret Twilio Auth token, you can find at: https://www.twilio.com/user/account",
+      "value": "enter_your_auth_token_here",
+      "required": true
+    }
+  },
+  "scripts": {
+    "postdeploy": "bundle exec rake db:setup"
+  },
+  "website": "https://github.com/TwilioDevEd/call-tracking-rails",
+  "repository": "https://github.com/TwilioDevEd/call-tracking-rails",
+  "logo": "https://s3.amazonaws.com/howtodocs/twilio-logo.png",
+  "success_url": "/"
+}
