@@ -30,7 +30,7 @@ This project is built using [Ruby on Rails](http://rubyonrails.org/) Framework.
 
    This project is configured to use a **TwiML App**, which allows us to easily set the voice URLs for all Twilio phone numbers we purchase in this app.
 
-   [Create a new TwiML app](https://www.twilio.com/console/voice/dev-tools/twiml-apps/add).
+   Click [here](https://www.twilio.com/console/voice/dev-tools/twiml-apps/add) to create a new TwiML app.
 
    ![Creating a TwiML App](http://howtodocs.s3.amazonaws.com/call-tracking-twiml-app.gif)
 
