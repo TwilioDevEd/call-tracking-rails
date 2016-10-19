@@ -74,8 +74,6 @@ This project is built using [Ruby on Rails](http://rubyonrails.org/) Framework.
 
 1. Check it out at [http://localhost:3000](http://localhost:3000)
 
-That's it!
-
 ## Meta
 
 * No warranty expressed or implied. Software is as is. Diggity.
