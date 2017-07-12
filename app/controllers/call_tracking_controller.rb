@@ -3,7 +3,7 @@ class CallTrackingController < ApplicationController
 
   def forward_call
     lead = Lead.create(lead_params)
-    render text: twilio_response.to_s
+    render text: twilio_response
   end
 
   private
@@ -12,8 +12,8 @@ class CallTrackingController < ApplicationController
     phone_number = lead_source.forwarding_number
 
     response = Twilio::TwiML::VoiceResponse.new
-    response.dial(phone_number)
-    response
+    response.dial(number: phone_number)
+    response.to_s
   end
 
   def lead_params

@@ -15,7 +15,7 @@ end
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'twilio-ruby', '~> 5.0.0.rc24'
+gem 'twilio-ruby', '~> 5.0.0.rc26'
 gem 'global_phone'
 
 group :test do
