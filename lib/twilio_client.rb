@@ -16,8 +16,7 @@ class TwilioClient
   end
 
   def available_phone_numbers(area_code = '415')
-    client.available_phone_numbers.
-      get('US').local.list(area_code: area_code).take(10)
+    client.available_phone_numbers('US').local.list(area_code: area_code).take(10)
   end
 
   def purchase_phone_number(phone_number)
@@ -31,11 +30,11 @@ class TwilioClient
   DEFAULT_APPLICATION_NAME = 'Call tracking app'
 
   def sid
-    applications = @client.account.applications.list(friendly_name: DEFAULT_APPLICATION_NAME)
+    applications = @client.applications.list(friendly_name: DEFAULT_APPLICATION_NAME)
     if applications.any?
       applications.first.sid
     else
-      @client.account.applications.create(friendly_name: DEFAULT_APPLICATION_NAME).sid
+      @client.applications.create(friendly_name: DEFAULT_APPLICATION_NAME).sid
     end
   end
 
