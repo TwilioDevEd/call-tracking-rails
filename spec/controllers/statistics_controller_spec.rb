@@ -7,7 +7,12 @@ describe StatisticsController do
       allow(LeadSource).to receive(:count_leads).and_return(lead_sources)
 
       get :leads_by_source
-      expect(response.body).to eq [{label: "Downtown", value:3}, {label: "Smalltown", value: 1}].to_json
+      hash_response = JSON.parse(response.body)
+      datasets = hash_response["datasets"]
+      labels = hash_response["labels"]
+      expect(datasets.length).to be(1)
+      expect(datasets.first).to include("data" => [3, 1])
+      expect(labels).to eq(["Downtown", "Smalltown"])
     end
   end
 
@@ -17,7 +22,12 @@ describe StatisticsController do
       allow(Lead).to receive(:count_by_city).and_return(leads)
 
       get :leads_by_city
-      expect(response.body).to eq [{label: "San Diego", value: 1}, {label: "Modesto", value: 2}].to_json
+      hash_response = JSON.parse(response.body)
+      datasets = hash_response["datasets"]
+      labels = hash_response["labels"]
+      expect(datasets.length).to be(1)
+      expect(datasets.first).to include("data" => [1, 2])
+      expect(labels).to eq ["San Diego", "Modesto"]
     end
   end
 end
