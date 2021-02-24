@@ -130,6 +130,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.11.1-x86_64-linux)
       racc (~> 1.4)
+    pg (1.2.3)
     popper_js (1.16.0)
     public_suffix (4.0.6)
     puma (5.1.1)
@@ -214,7 +215,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     thor (1.1.0)
     tilt (2.0.10)
     turbolinks (5.2.1)
@@ -262,13 +262,13 @@ DEPENDENCIES
   global_phone
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  pg
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.1)
   rails-controller-testing
   rspec-rails
   spring
-  sqlite3 (~> 1.4)
   turbolinks (~> 5)
   twilio-ruby (~> 5.46)
   tzinfo-data
