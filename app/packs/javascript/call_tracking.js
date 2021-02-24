@@ -12,11 +12,10 @@ CallTrackingGraph = function(selector, data) {
   function getContext() {
     return $(selector).get(0).getContext("2d");
   }
-
   return {
     draw: function() {
       var context = getContext(selector);
-      new Chart(context).Pie(data);
+      new Chart(context, { type: 'pie', data });
     }
   }
 }

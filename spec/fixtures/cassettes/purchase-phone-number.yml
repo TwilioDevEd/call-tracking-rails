@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.twilio.com/2010-04-01/Accounts/<TWILIO ACCOUNT SID>/Applications.json?FriendlyName=Call%20tracking%20app
+    uri: !ruby/regexp /^https:\/\/api\.twilio\.com\/2010-04-01\/Accounts\/.*\/Applications\.json?FriendlyName=Call%20tracking%20app/
     body:
       encoding: US-ASCII
       string: ''
@@ -62,7 +62,7 @@ http_interactions:
   recorded_at: Fri, 23 Jun 2017 10:33:38 GMT
 - request:
     method: post
-    uri: https://api.twilio.com/2010-04-01/Accounts/<TWILIO ACCOUNT SID>/Applications.json
+    uri: !ruby/regexp /^https:\/\/api\.twilio\.com\/2010-04-01\/Accounts\/.*\/Applications\.json/
     body:
       encoding: UTF-8
       string: FriendlyName=Call+tracking+app
@@ -128,7 +128,7 @@ http_interactions:
   recorded_at: Fri, 23 Jun 2017 10:33:39 GMT
 - request:
     method: post
-    uri: https://api.twilio.com/2010-04-01/Accounts/<TWILIO ACCOUNT SID>/IncomingPhoneNumbers.json
+    uri: !ruby/regexp /^https:\/\/api\.twilio\.com\/2010-04-01\/Accounts\/.*\/IncomingPhoneNumbers\.json/
     body:
       encoding: UTF-8
       string: PhoneNumber=%2B14152339867&VoiceApplicationSid=APe39e67b56459410e9d2f6426125cb160

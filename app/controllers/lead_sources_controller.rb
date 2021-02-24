@@ -1,5 +1,5 @@
 class LeadSourcesController < ApplicationController
-  before_filter :find_lead_source, only: [:edit, :update]
+  before_action :find_lead_source, only: [:edit, :update]
 
   def edit
   end
@@ -14,7 +14,7 @@ class LeadSourcesController < ApplicationController
   end
 
   def update
-    if @lead_source.update_attributes(lead_sources_params)
+    if @lead_source.update(lead_sources_params)
       redirect_to root_url, notice: 'Lead source successfully updated.'
     end
   end

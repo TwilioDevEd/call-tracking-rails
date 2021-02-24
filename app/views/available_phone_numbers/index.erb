@@ -20,7 +20,7 @@
         <tr>
           <td><%= number.friendly_name %></td>
           <td>
-            <%= link_to 'Purchase', lead_sources_path(number.phone_number), method: :post, class: 'btn btn-primary btn-xs' %>
+            <%= button_to 'Purchase', lead_sources_url(format: number.phone_number), class: 'btn btn-primary btn-xs' %>
           </td>
         </tr>
       <% end %>
