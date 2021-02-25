@@ -4,7 +4,7 @@
  
 # Call Tracking - Rails
 
-![](https://github.com/TwilioDevEd/call-tracking-rails/workflows/build/badge.svg)
+![](https://github.com/TwilioDevEd/call-tracking-rails/actions/workflows/build.yml/badge.svg)
 
 ## About
 
