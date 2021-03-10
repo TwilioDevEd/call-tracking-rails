@@ -3,7 +3,7 @@ class CallTrackingController < ApplicationController
 
   def forward_call
     lead = Lead.create(lead_params)
-    render text: twilio_response
+    render plain: twilio_response
   end
 
   private

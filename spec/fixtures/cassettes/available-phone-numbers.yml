@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.twilio.com/2010-04-01/Accounts/<TWILIO ACCOUNT SID>/AvailablePhoneNumbers/US/Local.json?AreaCode=415
+    uri: !ruby/regexp /^https:\/\/api\.twilio\.com\/2010-04-01\/Accounts\/.*\/AvailablePhoneNumbers\/US\/Local\.json\?AreaCode=415/
     body:
       encoding: US-ASCII
       string: ''

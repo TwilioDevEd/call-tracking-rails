@@ -12,11 +12,28 @@ class StatisticsController < ApplicationController
   private
 
   def format_for_chart(values)
-    values.map do |label, value|
-      {
-        label: label,
-        value: value
-      }
-    end
+    {
+      datasets: [{
+        data: values.values,
+        backgroundColor: get_colors(values.length)
+      }],
+      labels: values.keys
+    }
+  end
+
+  def get_colors(quantity)
+    colors = [
+      '#eddcd2ff',
+      '#fff1e6ff',
+      '#fde2e4ff',
+      '#fad2e1ff',
+      '#c5deddff',
+      '#dbe7e4ff',
+      '#f0efebff',
+      '#d6e2e9ff',
+      '#bcd4e6ff',
+      '#99c1deff',
+    ]
+    return colors.reverse()[0, quantity]
   end
 end

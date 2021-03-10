@@ -10,13 +10,13 @@ describe CallTrackingController do
 
     it "creates a lead" do
       expect do
-        post :forward_call, "Called" => '+12568417275', "Caller" => '+12568417333', "FromCity" => 'San Diego', "FromState" => 'CA'
+        post :forward_call, params: { "Called" => '+12568417275', "Caller" => '+12568417333', "FromCity" => 'San Diego', "FromState" => 'CA' }
       end.to change(Lead, :count).by(1)
     end
 
     it "renders a TwiML text response" do
-      post :forward_call, "Called" => '+12568417275', "Caller" => '+12568417333', "FromCity" => 'San Diego', "FromState" => 'CA'
-      expect(response.body).to eq("<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response><Dial>+593 99 267 0240</Dial></Response>")
+      post :forward_call, params: { "Called" => '+12568417275', "Caller" => '+12568417333', "FromCity" => 'San Diego', "FromState" => 'CA' }
+      expect(response.body).to eq("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Response>\n<Dial>+593 99 267 0240</Dial>\n</Response>\n")
     end
   end
 end

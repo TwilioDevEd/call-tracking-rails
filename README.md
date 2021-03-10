@@ -1,10 +1,12 @@
-<a href="https://www.twilio.com">
-  <img src="https://static0.twilio.com/marketing/bundles/marketing/img/logos/wordmark-red.svg" alt="Twilio" width="250" />
+<a  href="https://www.twilio.com">
+<img  src="https://static0.twilio.com/marketing/bundles/marketing/img/logos/wordmark-red.svg"  alt="Twilio"  width="250"  />
 </a>
-
+ 
 # Call Tracking - Rails
 
-[![Build Status](https://travis-ci.org/TwilioDevEd/call-tracking-rails.svg?branch=master)](https://travis-ci.org/TwilioDevEd/call-tracking-rails)
+![](https://github.com/TwilioDevEd/call-tracking-rails/actions/workflows/build.yml/badge.svg)
+
+## About
 
 Use Twilio to track the effectiveness of your different marketing campaigns. Learn how call tracking helps organizations in [these Twilio customer stories](https://www.twilio.com/use-cases/call-tracking).
 
@@ -12,7 +14,7 @@ Use Twilio to track the effectiveness of your different marketing campaigns. Lea
 
 ## Local development
 
-This project is built using [Ruby on Rails](http://rubyonrails.org/) Framework.
+This project is built using [Ruby on Rails](http://rubyonrails.org/) and [NodeJS](https://nodejs.org/en/) Frameworks.
 
 1. First clone this repository and `cd` into it.
 
@@ -21,18 +23,33 @@ This project is built using [Ruby on Rails](http://rubyonrails.org/) Framework.
    $ cd call-tracking-rails
    ```
 
-1. Install the dependencies.
+1. Install Rails the dependencies.
    ```
    $ bundle install
    ```
 
-1. Create a TwiML App.
+1. Install Webpack the dependencies.
+   ```
+   $ npm install
+   ```
 
-   This project is configured to use a **TwiML App**, which allows us to easily set the voice URLs for all Twilio phone numbers we purchase in this app.
+1. Expose your application to the wider internet using [ngrok](http://ngrok.com). This step is important because the application won't work as expected if you run it through localhost.
+   ```bash
+   $ ngrok http 3000
+   ```
 
-   Click [here](https://www.twilio.com/console/voice/dev-tools/twiml-apps/add) to create a new TwiML app.
+   Your ngrok URL should look something like this: `http://9a159ccf.ngrok.io`
 
-   ![Creating a TwiML App](http://howtodocs.s3.amazonaws.com/call-tracking-twiml-app.gif)
+   You can read [this blog post](https://www.twilio.com/blog/2015/09/6-awesome-reasons-to-use-ngrok-when-testing-webhooks.html)
+   for more details on how to use ngrok.
+
+1. Configure your Twilio App to call your webhook.
+
+   Before you can run this app you need to go into your account portal and [create a new Twilio Application](https://www.twilio.com/console/phone-numbers/runtime/twiml-apps). Once you have created an app the urls should look like:
+
+   Voice: `https://<ngrok_subdomain>.ngrok.io/call-tracking/forward-call`
+
+   SMS & MMS: doesn't matter
 
    You can learn more about TwiML apps [here](https://www.twilio.com/help/faq/twilio-client/how-do-i-create-a-twiml-app).
 
@@ -44,20 +61,14 @@ This project is built using [Ruby on Rails](http://rubyonrails.org/) Framework.
 
    You can find your `TWILIO_ACCOUNT_SID` and `TWILIO_AUTH_TOKEN` in your
    [Twilio Account Settings](https://www.twilio.com/console/account/settings).
-   You will also need a `TWIML_APPLICATION_SID`, which you may find [here](https://www.twilio.com/console/voice/dev-tools/twiml-apps).
-
-   Run:
-   ```bash
-   $ source .env
-   ```
-   to export the environment variables.
+   You will also need a `TWIML_APPLICATION_SID`, which you may find [here](https://www.twilio.com/console/phone-numbers/runtime/twiml-apps). The webhooks can be left empty as they will be configured later.
 
 1. Create database and run migrations.
 
    _Make sure you have installed [PostgreSQL](http://www.postgresql.org/). If on a Mac, I recommend [Postgres.app](http://postgresapp.com)_
 
    ```bash
-   $ bundle exec rake db:setup
+   $ bundle exec rails db:setup
    ```
 
 1. Make sure the tests succeed.
@@ -77,5 +88,5 @@ This project is built using [Ruby on Rails](http://rubyonrails.org/) Framework.
 ## Meta
 
 * No warranty expressed or implied. Software is as is. Diggity.
-* [MIT License](http://www.opensource.org/licenses/mit-license.html)
+* [MIT License](LICENSE)
 * Lovingly crafted by Twilio Developer Education.
