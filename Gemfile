@@ -42,7 +42,7 @@ end
 
 group :test do
   gem 'rails-controller-testing'
-  gem 'webmock'
+  gem 'webmock', '>= 3.12.2'
   gem 'vcr'
 end
 
